@@ -1,0 +1,4 @@
+<launch>
+  <include file="@CMAKE_CURRENT_SOURCE_DIR@/launch/hri1_display.launch" />
+  <include file="@CMAKE_CURRENT_SOURCE_DIR@/launch/hri1_control.launch" />
+</launch>

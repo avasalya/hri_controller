@@ -1,0 +1,10 @@
+<launch>
+  <arg name="model" value="$(find hrp2_drc_description)/urdf/hrp2drc.urdf"/>
+  <arg name="gui" default="True" />
+  <param name="robot_description" textfile="$(arg model)" />
+  <arg name="env_model" value="$(find mc_env_description)/urdf/ground.urdf"/>
+  <param name="env/robot_description" textfile="$(arg env_model)" />
+  <param name="env/tf_prefix" value="/control/env_1"/>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d @CMAKE_CURRENT_SOURCE_DIR@/launch/display.rviz"/>
+</launch>
